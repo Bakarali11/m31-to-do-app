@@ -6,7 +6,7 @@ import UserInput from "./components/UserInput"
 // TODO APP
 // Display list ✅
 // Add items ✅
-// Remove items
+// Remove items 
 // Check items as done
 // Edit items
 

@@ -10,13 +10,11 @@ const UserInput = ({ handleForm }) => {
   };
 
   return (
-    <div>
       <form onSubmit={handleSubmit}>
         <input name="added" type="text" onChange={(e) => setInput(e.target.value)} value={input} />
         <button type="submit">+</button>
       </form>
-    </div>
-  );
-};
+  )
+}
 
 export default UserInput
