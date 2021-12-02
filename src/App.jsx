@@ -11,16 +11,22 @@ import UserInput from "./components/UserInput"
 // Edit items
 
 const App = () => {
-  const [list, setList] = useState(["to-do 1", "to-do 2", "to-do 3"])
+  const [list, setList] = useState([])
 
   const handleForm = (newItem) => {
     setList([...list, newItem])
   }
 
+  const handleDelete = (item) => {
+    let storedList = [...list]
+    let remainder = storedList.filter(currentItem => currentItem !== item)
+    setList(remainder)
+  }
+
   return (
     <div className="wrapper">
       <UserInput handleForm={handleForm} />
-      <List items={list} />
+      <List items={list} handleDelete={handleDelete} />
     </div>
   )
 }
