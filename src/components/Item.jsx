@@ -1,8 +1,10 @@
-export const Item = ({ item, handleDelete, index }) => (
-    <li>
-        <p>{item}</p>
-        <button onClick={() => console.log("Done")}>Done</button>
-        <button onClick={() => handleDelete(index)}>Remove</button>
+import "./Item.css"
+
+export const Item = ({ item, handleDelete, handleChecked }) => (
+    <li className={`itemWrapper ${item.checked ? "checked" : ""}`}>
+        <p>{item.value}</p>
+        <input type="checkbox" checked={item.checked} onChange={handleChecked}/>
+        <button onClick={handleDelete}>Remove</button>
     </li>
 )
 
