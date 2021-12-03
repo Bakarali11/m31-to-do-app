@@ -6,7 +6,7 @@ import UserInput from "./components/UserInput"
 // TODO APP
 // Display list ✅
 // Add items ✅
-// Remove items 
+// Remove items ✅
 // Check items as done
 // Edit items
 
@@ -17,10 +17,10 @@ const App = () => {
     setList([...list, newItem])
   }
 
-  const handleDelete = (item) => {
+  const handleDelete = (index) => {
     let storedList = [...list]
-    let remainder = storedList.filter(currentItem => currentItem !== item)
-    setList(remainder)
+    storedList.splice(index, 1)
+    setList(storedList)
   }
 
   return (
