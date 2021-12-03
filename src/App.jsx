@@ -13,7 +13,7 @@ const App = () => {
   const [list, setList] = useState([])
 
   const handleForm = (newItem) => {
-    setList([...list, { value: newItem, checked: false }])
+    setList([...list, { value: newItem, checked: false, date: new Date() }])
   }
 
   const handleChecked = (index) => {
@@ -33,6 +33,7 @@ const App = () => {
 
   return (
     <div className="wrapper">
+      <h1>CN To-do App</h1>
       <UserInput handleForm={handleForm} />
       <List items={list} handleDelete={handleDelete} handleChecked={handleChecked} />
     </div>

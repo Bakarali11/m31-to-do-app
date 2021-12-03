@@ -1,12 +1,26 @@
 .itemWrapper {
   border: 1px solid grey;
-  width: 200px;
+  width: 300px;
+  box-sizing: border-box;
   border-radius: 5px;
   padding: 10px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+}
+
+.actions input {
+  margin: 10px;
 }
 
 .itemWrapper p {
-  margin-top: 2px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .checked {
@@ -16,4 +30,10 @@
 
 .checked p {
   text-decoration: line-through;
+}
+
+.date {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-size: 0.7em;
 }
